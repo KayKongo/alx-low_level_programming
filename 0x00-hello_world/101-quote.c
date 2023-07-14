@@ -1,17 +1,13 @@
 #include <unistd.h>
-#include <stdlib.h>
 /**
- * main - Entry point of the program
+ * main - Entry point
  *
  * Return: Always 1 (Error)
  */
 int main(void)
 {
-const char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-ssize_t len = sizeof(msg) - 1;
-ssize_t ret;
-ret = write(STDERR_FILENO, msg, len);
-if (ret != len)
-	return (EXIT_FAILURE);
-return (EXIT_SUCCESS);
+    int len = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n") - 1;
+    const char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    write(2, str, len);
+    return (1);
 }
