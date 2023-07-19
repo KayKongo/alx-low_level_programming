@@ -3,10 +3,21 @@
 
 #define MAX_LENGTH 5000
 
-void add_strings(char result[], const char str1[], const char str2[]) {
-    // Function implementation (same as before)
+/**
+ * add_strings - Adds two strings representing non-negative integers.
+ * @result: The buffer to store the result.
+ * @str1: The first number as a string.
+ * @str2: The second number as a string.
+ */
+void add_strings(char result[], const char str1[], const char str2) {
+    // Function implementation to add two strings representing non-negative integers.
 }
 
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0 (Success).
+ */
 int main(void) {
     int i;
     char fib1[MAX_LENGTH];
