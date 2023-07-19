@@ -1,41 +1,26 @@
 #include <stdio.h>
-#include <string.h>
 
-#define MAX_LENGTH 5000
+int main()
+{
+    int fib1 = 1, fib2 = 2, fib3, count = 0;
 
-/**
- * add_strings - Adds two strings representing non-negative integers.
- * @result: The buffer to store the result.
- * @str1: The first number as a string.
- * @str2: The second number as a string.
- */
-void add_strings(char result[], const char str1[], const char str2) {
-    // Function implementation to add two strings representing non-negative integers.
-}
+    printf("%d, %d, ", fib1, fib2);
+    count += 2;
 
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0 (Success).
- */
-int main(void) {
-    int i;
-    char fib1[MAX_LENGTH];
-    char fib2[MAX_LENGTH];
-    char temp[MAX_LENGTH];
+    while (count < 98)
+    {
+        fib3 = fib1 + fib2;
+        printf("%d", fib3);
+        count++;
 
-    strcpy(fib1, "1");
-    strcpy(fib2, "2");
+        if (count != 98)
+            printf(", ");
 
-    printf("%s, %s", fib1, fib2);
-
-    for (i = 0; i < 96; i++) {
-        add_strings(temp, fib1, fib2);
-        strcpy(fib1, fib2);
-        strcpy(fib2, temp);
-        printf(", %s", fib2);
+        fib1 = fib2;
+        fib2 = fib3;
     }
 
     printf("\n");
+
     return 0;
 }
