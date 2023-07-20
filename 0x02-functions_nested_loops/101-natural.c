@@ -1,19 +1,20 @@
 #include <stdio.h>
-
 /**
- * main - Entry point of the program.
+ * main - entry point of the program
  *
- * Return: Always 0 (Success).
+ * Return: 0 on success
  */
-int main(void) {
-    int sum = 0;
+int main(void)
+{
+	int total = 0;
+	int i;
 
-    for (int i = 0; i < 1024; i++) {
-        if (i % 3 == 0 || i % 5 == 0) {
-            sum += i;
-        }
-    }
+	for (i = 1; i < 1024; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+			total += i;
+	}
+	printf("%d\n", total);
 
-    printf("%d\n", sum);
-    return 0;
+	return (0);
 }
