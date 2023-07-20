@@ -13,7 +13,22 @@
  * @b: second integer
  * @c: third integer
  * Return: largest number
+ *
+ * struct format - Struct format
+ *
+ * @month: the month in number format
+ * @day: the day of the month
+ * @year: the year
  */
+typedef struct format
+{
+    int month;
+    int day;
+    int year;
+} Date;
+
+int convert_day(int month, int day);
+void print_remaining_days(int month, int day, int year);
 int largest_number(int a, int b, int c);
 void positive_or_negative(int i);
 
